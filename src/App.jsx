@@ -1,11 +1,18 @@
+//import Home from "./home/Home";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./App.css";
+import {Outlet} from "react-router-dom"
+
 
 function App() {
   return (
     <>
-      <div className="d-flex justify-content-center align-items-center min-vh-100">
-        <h1 className="w-50 text-center">Advanced <span className="text-primary">E-commerce Project</span> using React Js Starter File</h1>
-      </div>
+      <Navbar/> 
+      <div className="min-vh-100">
+      <Outlet/>
+      </div> 
+      <Footer />
     </>
   );
 }
